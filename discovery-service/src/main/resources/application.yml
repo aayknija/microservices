@@ -1,8 +1,12 @@
-application:
-  name: discovery-service
+spring:
+  application:
+    name: discovery-service
 server:
   port: 9000
 eureka:
+  instance:
+    preferIpAddress: true
+    hostname: discovery-service
   client:
     registerWithEureka: false
     fetchRegistry: false
